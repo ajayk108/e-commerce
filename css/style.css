@@ -11,6 +11,9 @@ body{
 a{
     text-decoration: none;
 }
+ul{
+    list-style-type: none;
+}
 .top-nav{
     background: #f5f5f5;
     font-weight: 400;
@@ -60,6 +63,7 @@ a{
     padding: 18px;
     font-size: 14px;
     font-weight: 500;
+    color: #323232;
 }
 .cart-box{
     display: flex;
@@ -109,3 +113,228 @@ a{
 .ribon-gallery{
     background: gold;
 }
+
+.searchbar{
+    padding: 10px 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categories{
+    width: 300px;
+    height: 55px;
+    padding: 12px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 12px;
+    border: 1px solid black;
+    background: #fed700;
+    color: white;
+    border: none;
+    position: relative;
+}
+.categories .bars{
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+.categories span{
+    font-size: 32px;
+    font-weight: 900;
+
+}
+.categories .options{
+    width: 100%;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    background: white;
+    box-shadow: 1px 1px 4px #ccc;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+.categories .options ul li{
+    padding: 16px;
+    border-bottom: 1px solid #ccc;
+    color: #323232;
+}
+.categories:hover .options{
+    opacity: 1;
+    visibility: visible;;
+}
+.options ul li:hover {
+    background-color: gold;
+    color: white;
+}
+
+.black-friday{
+    border: 2px solid #ccc;
+    width: 300px;
+    padding: 8px 12px;
+    text-align: center;
+    color: blue;
+    transition: 0.3s;
+}
+.black-friday p{
+    font-size: 13px;
+    color: grey;
+}
+.black-friday:hover{
+    background: black;
+    color: white;
+}
+
+.search-box{
+    padding: 0 24px;
+}
+.search-box .form{
+    display: flex;
+    position: relative;
+}
+.search-box .search-input{
+    width: 450px;
+    padding: 18px;
+    outline: none;
+    border-width: 2px 0 2px 2px;
+    border-style: solid;
+    border-color: #ccc;
+    border-radius: 4px 0 0 4px;
+}
+.search-select-box{
+    width: 200px;
+    outline: none;
+    border-width: 2px 2px 2px 0;
+    border-style: solid;
+    border-color: #ccc;
+    color: #aaa;
+}   
+.search-box .search-btn{
+    width: 60px;
+    border: none;
+    background-color: gold;
+}
+.search-box .search-btn span{
+    color: white;
+    font-weight: 900;
+}
+.search-box-verticle-line{
+    position: absolute;
+    top: 8px;
+    left: 61%;
+    height: 40px;
+    width: 0.5px;
+    background:#ccc;
+}
+
+.header{
+    display: flex;
+    padding: 10px 72px;
+    gap: 24px;
+}
+.left-header{
+    flex-grow: 1;
+    background-image: url('../images/header.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding-right: 42px;
+    color: white;
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+.left-header p{
+    font-size: 18px;
+    font-weight: 100;
+    position: relative;
+    top: 0;
+    left: 500px;
+    animation: header 1s linear forwards;
+}
+.left-header h1{
+    font-size: 35px;
+    padding: 24px 0;
+    position: relative;
+    top: 0;
+    left: 500px;
+    animation: header 1s linear forwards;
+    animation-delay: 0.8s;
+}
+.left-header .header-view-btn{
+    border: none;
+    padding: 10px 12px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    opacity: 0;
+    animation: header-btn 1s linear forwards;
+    animation-delay: 2s;
+}
+.left-header .header-cat-btn{
+    border: none;
+    padding: 12px 12px;
+    background-color: gold;
+    color: blueviolet;
+    font-weight: 600;
+    opacity: 0;
+    animation: header-btn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+.right-header{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.right-header img{
+    width: 450px;
+}
+
+.slide-opacity{
+    position: relative;
+    overflow: hidden;
+}
+.slide-opacity div{
+    position: absolute;
+    top: 0;
+    left: 900px;
+    width: 300px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: skewX(45deg);      
+}
+
+.slide-opacity:hover div{
+    animation: opacity-slide 0.5s infinite ease-in;
+}
+
+@keyframes opacity-slide {
+    0%{
+        left: 900px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+@keyframes header {
+    0%{
+        left: 500px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+@keyframes header-btn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
